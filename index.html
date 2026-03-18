@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FC Fleet Limited | Delivery Van Rental, Leasing & Logistics – UK</title>
+<meta name="description" content="FC Fleet Limited – trusted delivery van rental, leasing and logistics services across the UK. Proud partners of Yodel and InPost.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;
+  --off:#f7f8fa;
+  --light:#eef0f4;
+  --border:#dde1e9;
+  --slate:#4a5568;
+  --dark:#1a2332;
+  --red:#e63012;
+  --red2:#c5270f;
+  --red-soft:rgba(230,48,18,.08);
+  --gold:#d4a017;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--dark);overflow-x:hidden}
+
+/* TOPBAR */
+.topbar{background:var(--dark);padding:.5rem 5vw;display:flex;justify-content:flex-end;gap:2rem;align-items:center;flex-wrap:wrap}
+.topbar a{font-size:.82rem;color:#94a3b8;text-decoration:none;display:flex;align-items:center;gap:.4rem;transition:color .2s}
+.topbar a:hover{color:var(--white)}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:var(--white);border-bottom:2px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:72px;box-shadow:0 2px 16px rgba(0,0,0,.06)}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:2px;color:var(--dark);text-decoration:none;display:flex;align-items:center;gap:.4rem}
+.logo-badge{background:var(--red);color:var(--white);padding:.15rem .55rem;border-radius:2px;font-size:1.8rem}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{font-size:.88rem;font-weight:600;color:var(--slate);text-decoration:none;letter-spacing:.3px;transition:color .2s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transition:transform .25s}
+.nav-links a:hover{color:var(--red)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{background:var(--red)!important;color:var(--white)!important;padding:.5rem 1.4rem;border-radius:4px;font-weight:700!important}
+.nav-cta::after{display:none!important}
+.nav-cta:hover{background:var(--red2)!important;color:var(--white)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:.3rem}
+.hamburger span{display:block;width:24px;height:2px;background:var(--dark);border-radius:2px;transition:all .3s}
+
+/* HERO */
+#home{background:var(--dark);min-height:92vh;display:flex;flex-direction:column;justify-content:center;padding:120px 5vw 80px;position:relative;overflow:hidden}
+.hero-bg-img{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1600&q=80&fit=crop') center/cover no-repeat;opacity:.13}
+.hero-pattern{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(255,255,255,.025) 59px,rgba(255,255,255,.025) 60px),repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(255,255,255,.025) 59px,rgba(255,255,255,.025) 60px)}
+.hero-slash{position:absolute;right:-60px;top:0;bottom:0;width:480px;background:linear-gradient(160deg,var(--red) 0%,#a81f08 100%);clip-path:polygon(20% 0,100% 0,100% 100%,0% 100%);opacity:.92}
+.hero-inner{position:relative;z-index:2;max-width:680px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:.35rem .9rem;border-radius:20px;margin-bottom:1.6rem;animation:fadeUp .7s ease both}
+.hero-eyebrow span{font-size:.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.hero-dot{width:7px;height:7px;background:var(--red);border-radius:50%;animation:pulse 1.5s infinite;flex-shrink:0}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,8vw,7rem);line-height:.92;letter-spacing:1px;color:var(--white);animation:fadeUp .7s .1s ease both}
+h1 em{color:#ff6b47;font-style:normal}
+.hero-sub{margin-top:1.6rem;font-size:1.05rem;font-weight:300;line-height:1.85;color:rgba(255,255,255,.62);max-width:500px;animation:fadeUp .7s .2s ease both}
+.hero-actions{margin-top:2.4rem;display:flex;flex-wrap:wrap;gap:1rem;animation:fadeUp .7s .3s ease both}
+.btn-red{background:var(--red);color:var(--white);padding:.85rem 2.2rem;border-radius:4px;font-weight:700;font-size:.95rem;letter-spacing:.3px;text-decoration:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.5rem;transition:background .2s,transform .2s}
+.btn-red:hover{background:var(--red2);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--white);padding:.85rem 2.2rem;border-radius:4px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid rgba(255,255,255,.25);display:inline-flex;align-items:center;gap:.5rem;transition:border-color .2s,transform .2s}
+.btn-ghost:hover{border-color:rgba(255,255,255,.6);transform:translateY(-2px)}
+.hero-kpis{margin-top:4rem;display:flex;flex-wrap:wrap;gap:0;animation:fadeUp .7s .4s ease both;border-top:1px solid rgba(255,255,255,.1);padding-top:2.2rem}
+.kpi{padding:.4rem 2.4rem .4rem 0;margin-right:2.4rem;border-right:1px solid rgba(255,255,255,.1)}
+.kpi:last-child{border-right:none}
+.kpi-num{font-family:'Bebas Neue',sans-serif;font-size:2.8rem;color:var(--white);letter-spacing:1px;line-height:1}
+.kpi-label{font-size:.78rem;color:rgba(255,255,255,.45);margin-top:.2rem;font-weight:500;letter-spacing:.5px}
+
+/* PARTNER STRIP */
+.partners-strip{background:var(--white);border-bottom:2px solid var(--border);padding:1.8rem 5vw}
+.partners-inner{display:flex;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.partners-label{font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--slate);padding-right:1.8rem;border-right:2px solid var(--border);white-space:nowrap}
+.partners-logos{display:flex;flex-wrap:wrap;align-items:center;gap:1.8rem;flex:1}
+.partner-badge{display:flex;align-items:center;gap:.7rem;padding:.55rem 1.3rem;border:2px solid var(--border);border-radius:6px;transition:border-color .25s,box-shadow .25s}
+.partner-badge:hover{border-color:var(--red);box-shadow:0 4px 20px rgba(230,48,18,.1)}
+.partner-logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.55rem;letter-spacing:2px}
+.yodel-color{color:#8b1a8b}
+.inpost-color{color:#f4a300}
+.partner-verified{font-size:.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--slate);background:var(--off);padding:.15rem .5rem;border-radius:2px}
+.partner-check{color:#22c55e;font-size:.95rem}
+
+/* TICKER */
+.ticker{background:var(--red);padding:.5rem 0;overflow:hidden;white-space:nowrap}
+.ticker-track{display:inline-block;animation:ticker 30s linear infinite}
+.ticker-track span{font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:2px;color:var(--white);padding:0 2rem}
+.ticker-track span::after{content:'  ●  '}
+
+/* SECTION SHARED */
+section{padding:96px 5vw}
+.tag{font-size:.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin-bottom:.7rem;display:flex;align-items:center;gap:.5rem}
+.tag::before{content:'';display:inline-block;width:18px;height:2px;background:var(--red)}
+h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,5vw,3.8rem);line-height:.95;letter-spacing:.5px;color:var(--dark);margin-bottom:1rem}
+.intro{font-size:1rem;color:var(--slate);line-height:1.85;max-width:600px}
+
+/* SERVICES */
+#services{background:var(--off)}
+.services-grid{margin-top:3.5rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
+.s-card{background:var(--white);border:1.5px solid var(--border);border-radius:8px;padding:2rem 1.8rem;transition:border-color .25s,transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.s-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.s-card:hover{border-color:rgba(230,48,18,.3);transform:translateY(-4px);box-shadow:0 12px 40px rgba(230,48,18,.1)}
+.s-card:hover::after{transform:scaleX(1)}
+.s-icon{width:48px;height:48px;background:var(--red-soft);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.2rem}
+.s-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.5px;color:var(--dark);margin-bottom:.6rem}
+.s-card p{font-size:.9rem;color:var(--slate);line-height:1.7}
+
+/* PARTNERS / CONTRACTS */
+#partners{background:var(--white)}
+.contracts-grid{margin-top:3.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.contract-card{border-radius:12px;overflow:hidden;border:2px solid var(--border);transition:box-shadow .25s,border-color .25s}
+.contract-card:hover{box-shadow:0 16px 50px rgba(0,0,0,.1);border-color:rgba(230,48,18,.25)}
+.contract-header{padding:2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.yodel-header{background:linear-gradient(135deg,#6d0a6d 0%,#9b22a0 100%)}
+.inpost-header{background:linear-gradient(135deg,#1a1a1a 0%,#333 100%)}
+.contract-logo{font-family:'Bebas Neue',sans-serif;font-size:2.3rem;letter-spacing:3px;color:var(--white)}
+.contract-tag{background:rgba(255,255,255,.2);color:rgba(255,255,255,.9);font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:.25rem .7rem;border-radius:20px;white-space:nowrap}
+.contract-body{background:var(--off);padding:1.8rem 2rem}
+.contract-body p{font-size:.9rem;color:var(--slate);line-height:1.8;margin-bottom:1.2rem}
+.contract-perks{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.contract-perks li{font-size:.88rem;color:var(--dark);font-weight:500;display:flex;align-items:center;gap:.6rem}
+.perk-dot{width:8px;height:8px;background:var(--red);border-radius:50%;flex-shrink:0}
+.trust-bar{margin-top:3rem;background:var(--dark);border-radius:10px;padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
+.trust-item{display:flex;align-items:center;gap:.8rem}
+.trust-icon{font-size:1.4rem}
+.trust-text h4{font-size:.85rem;font-weight:700;color:var(--white);margin-bottom:.1rem}
+.trust-text p{font-size:.78rem;color:#94a3b8}
+
+/* FLEET */
+#fleet{background:var(--off)}
+.fleet-grid{margin-top:3.5rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.5rem}
+.fleet-card{background:var(--white);border:1.5px solid var(--border);border-radius:8px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.fleet-card:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(0,0,0,.1)}
+.fleet-img{width:100%;height:160px;object-fit:cover;display:block}
+.fleet-availability{position:absolute;top:.7rem;right:.7rem;background:#22c55e;color:var(--white);font-size:.65rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.2rem .55rem;border-radius:20px}
+.fleet-img-wrap{position:relative}
+.fleet-body{padding:1.4rem}
+.fleet-name{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.5px;color:var(--dark);margin-bottom:.3rem}
+.fleet-sub{font-size:.8rem;color:var(--red);font-weight:600;margin-bottom:.9rem}
+.fleet-specs{list-style:none;display:flex;flex-direction:column;gap:.4rem}
+.fleet-specs li{font-size:.85rem;color:var(--slate);display:flex;gap:.5rem;align-items:center}
+.fleet-specs li::before{content:'✓';color:var(--red);font-weight:700}
+
+/* ═══════════════════════════════
+   WHY US — with Compliance & KPIs
+═══════════════════════════════ */
+#why{background:var(--white)}
+.why-top{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:3.5rem}
+.why-points{display:flex;flex-direction:column;gap:1.8rem}
+.why-pt{display:flex;gap:1.2rem}
+.why-num-wrap{flex-shrink:0;width:46px;height:46px;background:var(--red);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.35rem;color:var(--white)}
+.why-pt h4{font-weight:700;font-size:.97rem;color:var(--dark);margin-bottom:.3rem}
+.why-pt p{font-size:.88rem;color:var(--slate);line-height:1.7}
+
+/* Image feature block */
+.why-img-block{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 16px 50px rgba(0,0,0,.12)}
+.why-img-block img{width:100%;height:360px;object-fit:cover;display:block}
+.why-img-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(26,35,50,.9));padding:1.5rem}
+.why-img-overlay span{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:1px;color:var(--white)}
+
+/* KPI DASHBOARD */
+.kpi-dashboard{margin-top:3.5rem;background:var(--dark);border-radius:12px;overflow:hidden}
+.kpi-dash-header{background:var(--red);padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem}
+.kpi-dash-header h3{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:1px;color:var(--white)}
+.kpi-live{display:flex;align-items:center;gap:.5rem;font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.kpi-live-dot{width:8px;height:8px;background:#22c55e;border-radius:50%;animation:pulse 1.5s infinite}
+.kpi-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0}
+.kpi-card{padding:1.8rem 1.5rem;border-right:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);transition:background .2s}
+.kpi-card:hover{background:rgba(255,255,255,.04)}
+.kpi-card-num{font-family:'Bebas Neue',sans-serif;font-size:2.8rem;letter-spacing:1px;color:var(--white);line-height:1}
+.kpi-card-num.green{color:#4ade80}
+.kpi-card-num.gold{color:#fbbf24}
+.kpi-card-label{font-size:.78rem;color:#64748b;margin-top:.3rem;font-weight:500;line-height:1.4}
+
+/* COMPLIANCE */
+.compliance-section{margin-top:3.5rem}
+.compliance-header{display:flex;align-items:center;gap:1rem;margin-bottom:2rem}
+.compliance-header .tag{margin-bottom:0}
+.compliance-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem}
+.comp-card{background:var(--off);border:1.5px solid var(--border);border-radius:8px;padding:1.8rem;transition:border-color .25s,box-shadow .25s;position:relative;overflow:hidden}
+.comp-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red);border-radius:0 0 0 8px}
+.comp-card:hover{border-color:rgba(230,48,18,.3);box-shadow:0 8px 30px rgba(230,48,18,.08)}
+.comp-icon{font-size:1.8rem;margin-bottom:.9rem;display:block}
+.comp-card h4{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:.5px;color:var(--dark);margin-bottom:.5rem}
+.comp-card p{font-size:.88rem;color:var(--slate);line-height:1.7}
+.comp-badge{display:inline-block;margin-top:.8rem;background:var(--red-soft);color:var(--red);border:1px solid rgba(230,48,18,.2);font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.2rem .6rem;border-radius:3px}
+
+/* IMAGE SECTION */
+.image-strip{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:1rem;margin-top:3.5rem}
+.img-strip-main{border-radius:10px;overflow:hidden;grid-row:span 2;position:relative}
+.img-strip-main img{width:100%;height:100%;object-fit:cover;display:block;min-height:340px}
+.img-strip-sm{border-radius:10px;overflow:hidden}
+.img-strip-sm img{width:100%;height:160px;object-fit:cover;display:block}
+.img-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(26,35,50,.85));padding:1rem 1.2rem}
+.img-caption span{font-family:'Bebas Neue',sans-serif;font-size:1rem;color:var(--white);letter-spacing:.5px}
+
+/* PROCESS */
+#process{background:var(--dark);position:relative;overflow:hidden}
+.process-bg{position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(255,255,255,.02) 59px,rgba(255,255,255,.02) 60px)}
+.process-inner{position:relative;z-index:2}
+.process-inner h2{color:var(--white)}
+.process-inner .tag{color:#fb923c}
+.process-inner .tag::before{background:#fb923c}
+.process-inner .intro{color:#94a3b8}
+.steps{margin-top:3.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;position:relative}
+.steps::before{content:'';position:absolute;top:32px;left:0;right:0;height:1px;background:rgba(255,255,255,.07)}
+.step{padding:1rem 1.5rem 2rem;position:relative;z-index:1}
+.step-circle{width:64px;height:64px;border-radius:50%;border:2px solid rgba(255,255,255,.15);background:var(--dark);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--white);margin-bottom:1.2rem;transition:border-color .25s,background .25s}
+.step:hover .step-circle{border-color:var(--red);background:var(--red)}
+.step h4{font-weight:700;font-size:.95rem;color:var(--white);margin-bottom:.5rem}
+.step p{font-size:.85rem;color:#94a3b8;line-height:1.7}
+
+/* CAREERS */
+#careers{background:var(--off)}
+.careers-layout{margin-top:3.5rem;display:grid;grid-template-columns:1fr 1.3fr;gap:4rem;align-items:start}
+.careers-info h3{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:.5px;color:var(--dark);margin-bottom:.8rem}
+.careers-info p{font-size:.9rem;color:var(--slate);line-height:1.85;margin-bottom:1.2rem}
+.req-list{list-style:none;display:flex;flex-direction:column;gap:.65rem;margin-bottom:1.5rem}
+.req-list li{font-size:.92rem;color:var(--dark);font-weight:500;display:flex;align-items:center;gap:.7rem}
+.req-check{width:20px;height:20px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:.65rem;font-weight:700;flex-shrink:0}
+.careers-img{border-radius:10px;overflow:hidden;margin-bottom:1.5rem;box-shadow:0 8px 30px rgba(0,0,0,.1)}
+.careers-img img{width:100%;height:220px;object-fit:cover;display:block}
+.job-card{background:var(--white);border:2px solid var(--border);border-radius:10px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.06)}
+.job-card-head{background:var(--dark);padding:1.6rem 2rem;display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
+.job-title{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.5px;color:var(--white)}
+.job-badge{background:var(--red);color:var(--white);font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.3rem .8rem;border-radius:20px;white-space:nowrap}
+.job-meta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.5rem}
+.job-meta-tag{background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.75rem;font-weight:600;padding:.2rem .6rem;border-radius:3px}
+.job-body{padding:2rem}
+.job-body p{font-size:.9rem;color:var(--slate);line-height:1.8;margin-bottom:1.5rem}
+.job-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.8rem}
+.tag-chip{background:var(--red-soft);color:var(--red);border:1px solid rgba(230,48,18,.2);font-size:.72rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:.3rem .75rem;border-radius:3px}
+.apply-form{display:flex;flex-direction:column;gap:.85rem}
+.form-row2{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+.apply-form input,.apply-form textarea,.apply-form select{background:var(--off);border:1.5px solid var(--border);color:var(--dark);padding:.75rem 1rem;border-radius:5px;font-family:'DM Sans',sans-serif;font-size:.9rem;width:100%;outline:none;transition:border-color .2s}
+.apply-form input:focus,.apply-form textarea:focus,.apply-form select:focus{border-color:var(--red);background:var(--white)}
+.apply-form textarea{min-height:90px;resize:vertical}
+
+/* CONTACT */
+#contact{background:var(--white)}
+.contact-grid{margin-top:3.5rem;display:grid;grid-template-columns:1fr 1.5fr;gap:4rem}
+.contact-items{display:flex;flex-direction:column;gap:1.8rem}
+.c-item{display:flex;gap:1rem;align-items:flex-start}
+.c-icon{width:44px;height:44px;background:var(--red-soft);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.c-item h4{font-size:.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--slate);margin-bottom:.3rem}
+.c-item a,.c-item p{font-size:.95rem;font-weight:500;color:var(--dark);text-decoration:none;line-height:1.5}
+.c-item a:hover{color:var(--red)}
+.contact-form{display:flex;flex-direction:column;gap:.9rem}
+.contact-form input,.contact-form textarea,.contact-form select{background:var(--off);border:1.5px solid var(--border);color:var(--dark);padding:.8rem 1rem;border-radius:5px;font-family:'DM Sans',sans-serif;font-size:.9rem;width:100%;outline:none;transition:border-color .2s}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{border-color:var(--red);background:var(--white)}
+.contact-form textarea{min-height:130px;resize:vertical}
+.form-2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+
+/* FOOTER */
+footer{background:var(--dark);padding:3rem 5vw;border-top:3px solid var(--red)}
+.footer-inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:2.5rem}
+.footer-brand .logo{color:var(--white)}
+.footer-brand p{font-size:.85rem;color:#64748b;margin-top:.5rem;max-width:240px;line-height:1.6}
+.footer-col h5{font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#64748b;margin-bottom:1rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.footer-col ul a{font-size:.88rem;color:#94a3b8;text-decoration:none;transition:color .2s}
+.footer-col ul a:hover{color:var(--white)}
+.footer-bottom{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.07);display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:center}
+.footer-bottom p{font-size:.8rem;color:#475569}
+
+/* ANIMS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:.1s}
+.reveal-d2{transition-delay:.2s}
+.reveal-d3{transition-delay:.3s}
+
+/* MOBILE */
+@media(max-width:900px){
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--white);flex-direction:column;padding:1.5rem 5vw;border-bottom:2px solid var(--border);gap:1.2rem;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+  .nav-links.open{display:flex}
+  .hamburger{display:flex}
+  .why-top,.contracts-grid,.careers-layout,.contact-grid,.image-strip{grid-template-columns:1fr;gap:2rem}
+  .img-strip-main img{min-height:240px}
+  .form-2,.form-row2{grid-template-columns:1fr}
+  .hero-slash{width:180px}
+  .kpi{padding-right:1.5rem;margin-right:1.5rem}
+  .steps::before{display:none}
+  .partners-inner{flex-direction:column;align-items:flex-start}
+  .partners-label{border-right:none;padding-right:0;padding-bottom:.7rem;border-bottom:2px solid var(--border)}
+  .trust-bar{flex-direction:column}
+  .kpi-cards{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <a href="tel:+447931302971">📞 +44 7931 302 971</a>
+  <a href="mailto:samson@fcfleetlimited.co.uk">✉ samson@fcfleetlimited.co.uk</a>
+  <a href="https://www.fcfleet.co.uk">🌐 fcfleet.co.uk</a>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#home" class="logo"><span class="logo-badge">FC</span> Fleet Limited</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#partners">Partners</a></li>
+    <li><a href="#fleet">Fleet</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#careers">Careers</a></li>
+    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg-img"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-slash"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="hero-dot"></div>
+      <span>UK-Wide Fleet &amp; Logistics Solutions</span>
+    </div>
+    <h1>Moving <em>Business</em><br>Across the UK</h1>
+    <p class="hero-sub">FC Fleet Limited delivers reliable delivery van rental, leasing, and end-to-end logistics services. Trusted by leading carriers including <strong style="color:rgba(255,255,255,.9)">Yodel</strong> and <strong style="color:rgba(255,255,255,.9)">InPost</strong> — fully compliant, fully insured.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-red">Get a Free Quote →</a>
+      <a href="#services" class="btn-ghost">Our Services</a>
+    </div>
+    <div class="hero-kpis">
+      <div class="kpi"><div class="kpi-num">24/7</div><div class="kpi-label">Support Line</div></div>
+      <div class="kpi"><div class="kpi-num">UK</div><div class="kpi-label">Wide Coverage</div></div>
+      <div class="kpi"><div class="kpi-num">2+</div><div class="kpi-label">Major Contracts</div></div>
+      <div class="kpi"><div class="kpi-num">100%</div><div class="kpi-label">Compliance Standards</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER STRIP -->
+<div class="partners-strip">
+  <div class="partners-inner">
+    <div class="partners-label">Trusted Partners</div>
+    <div class="partners-logos">
+      <div class="partner-badge">
+        <span class="partner-logo-text yodel-color">YODEL</span>
+        <span class="partner-check">✓</span>
+        <span class="partner-verified">Active Contract</span>
+      </div>
+      <div class="partner-badge">
+        <span class="partner-logo-text inpost-color">InPost</span>
+        <span class="partner-check">✓</span>
+        <span class="partner-verified">Active Contract</span>
+      </div>
+    </div>
+    <div style="font-size:.82rem;color:var(--slate);font-weight:500;max-width:300px;line-height:1.5">FC Fleet Limited holds active service contracts with major UK logistics providers.</div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span>Delivery Van Rental</span><span>Van Leasing</span><span>Logistics Services</span><span>Last Mile Delivery</span><span>Yodel Partner</span><span>InPost Partner</span><span>Fully Compliant Operations</span><span>KPI Monitored</span><span>Freight Transport</span><span>Fleet Management</span><span>Same-Day Courier</span>
+    <span>Delivery Van Rental</span><span>Van Leasing</span><span>Logistics Services</span><span>Last Mile Delivery</span><span>Yodel Partner</span><span>InPost Partner</span><span>Fully Compliant Operations</span><span>KPI Monitored</span><span>Freight Transport</span><span>Fleet Management</span><span>Same-Day Courier</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="reveal">
+    <div class="tag">What We Do</div>
+    <h2>Our Services</h2>
+    <p class="intro">From flexible van hire to managed logistics, FC Fleet Limited provides the full spectrum of fleet and delivery solutions your business needs.</p>
+  </div>
+
+  <!-- Image strip -->
+  <div class="image-strip reveal reveal-d1">
+    <div class="img-strip-main">
+      <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80&fit=crop" alt="Delivery vans lined up ready for dispatch" loading="lazy">
+      <div class="img-caption"><span>Fleet Ready for Dispatch</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1rem">
+      <div class="img-strip-sm">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&fit=crop" alt="Driver loading parcels into van" loading="lazy">
+      </div>
+      <div class="img-strip-sm">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80&fit=crop" alt="Logistics warehouse operations" loading="lazy">
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1rem">
+      <div class="img-strip-sm">
+        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=600&q=80&fit=crop" alt="Highway logistics transport" loading="lazy">
+      </div>
+      <div class="img-strip-sm">
+        <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600&q=80&fit=crop" alt="Parcel delivery service" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <div class="services-grid reveal reveal-d2">
+    <div class="s-card">
+      <div class="s-icon">🚐</div>
+      <h3>Delivery Van Rental</h3>
+      <p>Daily, weekly, and monthly van hire with flexible agreements. Fully insured, road-ready vehicles available at short notice for businesses of all sizes.</p>
+    </div>
+    <div class="s-card">
+      <div class="s-icon">📋</div>
+      <h3>Van Leasing</h3>
+      <p>Cost-effective long-term leasing packages with fixed monthly payments and no large upfront costs. Maintenance options available for full peace of mind.</p>
+    </div>
+    <div class="s-card">
+      <div class="s-icon">📦</div>
+      <h3>Logistics Services</h3>
+      <p>End-to-end logistics planning and execution. We manage scheduling, routing, and delivery coordination so your operations run smoothly every day.</p>
+    </div>
+    <div class="s-card">
+      <div class="s-icon">🏙️</div>
+      <h3>Last Mile Delivery</h3>
+      <p>Specialist last-mile delivery for e-commerce, retail, and wholesale — backed by our active contracts with major UK carrier networks.</p>
+    </div>
+    <div class="s-card">
+      <div class="s-icon">🚛</div>
+      <h3>Freight Transport</h3>
+      <p>Safe, timely movement of palletised loads, bulk goods, and specialist cargo across the UK road network with full tracking and documentation.</p>
+    </div>
+    <div class="s-card">
+      <div class="s-icon">❄️</div>
+      <h3>Temperature-Controlled Transport</h3>
+      <p>Refrigerated and chilled vehicles for food, pharmaceuticals, and perishables — fully compliant with UK cold chain regulations.</p>
+    </div>
+    <div class="s-card">
+      <div class="s-icon">🔄</div>
+      <h3>Fleet Management</h3>
+      <p>We handle maintenance scheduling, compliance tracking, driver coordination, and operational reporting so you can focus on your business.</p>
+    </div>
+    <div class="s-card">
+      <div class="s-icon">⚡</div>
+      <h3>Same-Day &amp; Express Courier</h3>
+      <p>Urgent deliveries handled with speed and care. Our same-day courier network covers major UK cities with real-time updates throughout.</p>
+    </div>
+    <div class="s-card">
+      <div class="s-icon">🏗️</div>
+      <h3>Construction &amp; Trade Logistics</h3>
+      <p>Luton vans and tail-lift vehicles for tradespeople and construction firms. Heavy materials moved safely and on schedule.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS / CONTRACTS -->
+<section id="partners">
+  <div class="reveal">
+    <div class="tag">Our Contracts</div>
+    <h2>Trusted by Industry Leaders</h2>
+    <p class="intro">FC Fleet Limited holds active service contracts with two of the UK's most prominent parcel and logistics networks.</p>
+  </div>
+  <div class="contracts-grid reveal reveal-d1">
+    <div class="contract-card">
+      <div class="contract-header yodel-header">
+        <div>
+          <div class="contract-logo">YODEL</div>
+          <div style="color:rgba(255,255,255,.75);font-size:.82rem;margin-top:.2rem">UK Parcel Delivery Network</div>
+        </div>
+        <span class="contract-tag">✓ Active Contract</span>
+      </div>
+      <div class="contract-body">
+        <p>FC Fleet Limited is an active delivery partner of Yodel — one of the UK's leading parcel carriers. Our drivers and vehicles operate within Yodel's delivery network, ensuring parcels reach customers on time, every time.</p>
+        <ul class="contract-perks">
+          <li><span class="perk-dot"></span>Integrated with Yodel's UK delivery operations</li>
+          <li><span class="perk-dot"></span>Scheduled route deliveries across UK postcodes</li>
+          <li><span class="perk-dot"></span>Compliant with Yodel's safety and service standards</li>
+          <li><span class="perk-dot"></span>Proven track record of reliable performance</li>
+        </ul>
+      </div>
+    </div>
+    <div class="contract-card">
+      <div class="contract-header inpost-header">
+        <div>
+          <div class="contract-logo" style="color:var(--gold)">InPost</div>
+          <div style="color:rgba(255,255,255,.7);font-size:.82rem;margin-top:.2rem">Smart Locker &amp; Parcel Network</div>
+        </div>
+        <span class="contract-tag">✓ Active Contract</span>
+      </div>
+      <div class="contract-body">
+        <p>We are an active service partner of InPost, the UK's fastest-growing smart locker and out-of-home delivery network. FC Fleet supports InPost's logistics operations, contributing to their nationwide parcel distribution infrastructure.</p>
+        <ul class="contract-perks">
+          <li><span class="perk-dot"></span>Supporting InPost's UK logistics infrastructure</li>
+          <li><span class="perk-dot"></span>Parcel collection and distribution services</li>
+          <li><span class="perk-dot"></span>Operating to InPost's strict service-level agreements</li>
+          <li><span class="perk-dot"></span>Growing partnership with an expanding UK network</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="trust-bar reveal reveal-d2">
+    <div class="trust-item"><div class="trust-icon">🛡️</div><div class="trust-text"><h4>Fully Insured Operations</h4><p>All vehicles and drivers covered</p></div></div>
+    <div class="trust-item"><div class="trust-icon">📜</div><div class="trust-text"><h4>UK Registered Business</h4><p>FC Fleet Limited — Companies House registered</p></div></div>
+    <div class="trust-item"><div class="trust-icon">🌐</div><div class="trust-text"><h4>UK-Wide Coverage</h4><p>England, Scotland &amp; Wales</p></div></div>
+    <div class="trust-item"><div class="trust-icon">📞</div><div class="trust-text"><h4>24/7 Support Line</h4><p>Always reachable when it matters</p></div></div>
+  </div>
+</section>
+
+<!-- FLEET -->
+<section id="fleet">
+  <div class="reveal">
+    <div class="tag">Our Vehicles</div>
+    <h2>The Fleet</h2>
+    <p class="intro">Well-maintained, fully insured vehicles ready to go. Choose the right vehicle for every job, from city runs to heavy trade deliveries.</p>
+  </div>
+  <div class="fleet-grid reveal reveal-d1">
+    <div class="fleet-card">
+      <div class="fleet-img-wrap">
+        <img class="fleet-img" src="https://images.unsplash.com/photo-1614977645540-7abd88ba8e41?w=500&q=80&fit=crop" alt="Small delivery van" loading="lazy">
+        <span class="fleet-availability">Available</span>
+      </div>
+      <div class="fleet-body">
+        <div class="fleet-name">Small Van</div>
+        <div class="fleet-sub">e.g. Ford Transit Connect</div>
+        <ul class="fleet-specs">
+          <li>City &amp; urban deliveries</li>
+          <li>Easy parking &amp; manoeuvring</li>
+          <li>Up to 1.0t payload</li>
+          <li>Fuel efficient</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fleet-card">
+      <div class="fleet-img-wrap">
+        <img class="fleet-img" src="https://images.unsplash.com/photo-1543465077-db45d34b88a5?w=500&q=80&fit=crop" alt="Medium panel van" loading="lazy">
+        <span class="fleet-availability">Available</span>
+      </div>
+      <div class="fleet-body">
+        <div class="fleet-name">Medium Van</div>
+        <div class="fleet-sub">e.g. Ford Transit Custom</div>
+        <ul class="fleet-specs">
+          <li>Versatile all-rounder</li>
+          <li>Up to 1.2t payload</li>
+          <li>Long wheelbase option</li>
+          <li>Ideal for trade use</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fleet-card">
+      <div class="fleet-img-wrap">
+        <img class="fleet-img" src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=500&q=80&fit=crop" alt="Large delivery van" loading="lazy">
+        <span class="fleet-availability">Available</span>
+      </div>
+      <div class="fleet-body">
+        <div class="fleet-name">Large Van</div>
+        <div class="fleet-sub">e.g. Ford Transit LWB</div>
+        <ul class="fleet-specs">
+          <li>High roof available</li>
+          <li>Up to 1.4t payload</li>
+          <li>Bulk delivery ready</li>
+          <li>Rear &amp; side loading</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fleet-card">
+      <div class="fleet-img-wrap">
+        <img class="fleet-img" src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=500&q=80&fit=crop" alt="Luton box van on road" loading="lazy">
+        <span class="fleet-availability">Available</span>
+      </div>
+      <div class="fleet-body">
+        <div class="fleet-name">Luton Van</div>
+        <div class="fleet-sub">With Tail Lift Option</div>
+        <ul class="fleet-specs">
+          <li>Maximum cargo volume</li>
+          <li>Up to 1.5t payload</li>
+          <li>Tail lift available</li>
+          <li>Furniture &amp; trade ready</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US — includes KPIs and Compliance -->
+<section id="why">
+  <div class="reveal">
+    <div class="tag">Why FC Fleet</div>
+    <h2>What Sets Us Apart</h2>
+    <p class="intro">We don't just provide vehicles — we deliver a full operational standard backed by compliance, monitored KPIs, and a team you can depend on.</p>
+  </div>
+
+  <!-- Why points + image -->
+  <div class="why-top reveal reveal-d1">
+    <div class="why-points">
+      <div class="why-pt">
+        <div class="why-num-wrap">01</div>
+        <div><h4>Proven Industry Contracts</h4><p>Active partnerships with Yodel and InPost demonstrate our ability to meet commercial-scale service-level agreements consistently.</p></div>
+      </div>
+      <div class="why-pt">
+        <div class="why-num-wrap">02</div>
+        <div><h4>Fully Maintained Fleet</h4><p>Every vehicle undergoes regular servicing, safety inspections, and pre-hire checks — eliminating unexpected downtime.</p></div>
+      </div>
+      <div class="why-pt">
+        <div class="why-num-wrap">03</div>
+        <div><h4>Licensed &amp; Professional Drivers</h4><p>Our drivers hold full UK driving licences, are background checked, and trained to represent your business professionally on the road.</p></div>
+      </div>
+      <div class="why-pt">
+        <div class="why-num-wrap">04</div>
+        <div><h4>Flexible Commercial Terms</h4><p>No rigid long-term obligations. We tailor agreements to suit your budget, scale, and operational requirements.</p></div>
+      </div>
+      <div class="why-pt">
+        <div class="why-num-wrap">05</div>
+        <div><h4>24/7 Responsive Support</h4><p>Real people, fast responses. Our team is reachable around the clock for operational support, emergencies, and queries.</p></div>
+      </div>
+    </div>
+    <div>
+      <div class="why-img-block">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80&fit=crop" alt="Professional logistics team reviewing operations" loading="lazy">
+        <div class="why-img-overlay"><span>Operational Excellence — Every Route, Every Day</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KPI DASHBOARD -->
+  <div class="kpi-dashboard reveal reveal-d2">
+    <div class="kpi-dash-header">
+      <h3>📊 Key Performance Indicators (KPIs)</h3>
+      <div class="kpi-live"><div class="kpi-live-dot"></div> Live Operational Metrics</div>
+    </div>
+    <div class="kpi-cards">
+      <div class="kpi-card">
+        <div class="kpi-card-num green">98%</div>
+        <div class="kpi-card-label">On-Time Delivery Rate</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-card-num green">100%</div>
+        <div class="kpi-card-label">Fleet Compliance Rate</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-card-num gold">99%</div>
+        <div class="kpi-card-label">Vehicle Availability</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-card-num green">&lt;2hr</div>
+        <div class="kpi-card-label">Average Response Time</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-card-num green">0</div>
+        <div class="kpi-card-label">Outstanding Safety Violations</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-card-num gold">100%</div>
+        <div class="kpi-card-label">Driver Licence Verification</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-card-num green">24/7</div>
+        <div class="kpi-card-label">Operational Support Coverage</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-card-num green">A</div>
+        <div class="kpi-card-label">Overall Compliance Rating</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPLIANCE -->
+  <div class="compliance-section reveal reveal-d3">
+    <div style="margin-bottom:1.5rem">
+      <div class="tag">Standards &amp; Compliance</div>
+      <h2 style="font-size:clamp(2rem,4vw,3rem)">We Operate to the Highest Standards</h2>
+      <p class="intro">FC Fleet Limited is committed to full compliance across all areas of our operations — from driver checks to vehicle roadworthiness and data handling.</p>
+    </div>
+    <div class="compliance-grid">
+      <div class="comp-card">
+        <span class="comp-icon">📋</span>
+        <h4>Driver Licence &amp; DBS Checks</h4>
+        <p>All drivers undergo full DVLA licence verification and DBS (Disclosure and Barring Service) checks before joining our team. We maintain up-to-date records for every driver in our fleet.</p>
+        <span class="comp-badge">Mandatory for All Drivers</span>
+      </div>
+      <div class="comp-card">
+        <span class="comp-icon">🔧</span>
+        <h4>Vehicle Safety Inspections</h4>
+        <p>Every vehicle in our fleet undergoes regular pre-use safety inspections in line with DVSA guidelines. Walkaround checks, tyre conditions, brakes, lights, and load security are verified before every deployment.</p>
+        <span class="comp-badge">DVSA Compliant</span>
+      </div>
+      <div class="comp-card">
+        <span class="comp-icon">🛡️</span>
+        <h4>Fleet Insurance &amp; Liability</h4>
+        <p>All FC Fleet vehicles operate with full commercial fleet insurance, covering hire and reward use, goods in transit, and public liability — giving our clients and partners full peace of mind.</p>
+        <span class="comp-badge">Fully Insured</span>
+      </div>
+      <div class="comp-card">
+        <span class="comp-icon">⚖️</span>
+        <h4>Working Time &amp; Hours Compliance</h4>
+        <p>We strictly adhere to the Working Time Regulations and EU/UK drivers' hours rules. Driver hours are monitored and managed to ensure legal compliance and road safety at all times.</p>
+        <span class="comp-badge">Working Time Regulations</span>
+      </div>
+      <div class="comp-card">
+        <span class="comp-icon">📊</span>
+        <h4>KRI Monitoring</h4>
+        <p>We actively monitor Key Risk Indicators (KRIs) across our fleet operations — including near-miss incidents, vehicle defect rates, driver behaviour, and delivery exceptions — to identify and mitigate risk proactively.</p>
+        <span class="comp-badge">Risk Managed</span>
+      </div>
+      <div class="comp-card">
+        <span class="comp-icon">🌿</span>
+        <h4>Environmental Responsibility</h4>
+        <p>FC Fleet is committed to reducing our carbon footprint through route optimisation, regular emission checks, and an ongoing commitment to transitioning to cleaner vehicle options as part of our long-term fleet strategy.</p>
+        <span class="comp-badge">Eco Conscious</span>
+      </div>
+      <div class="comp-card">
+        <span class="comp-icon">📁</span>
+        <h4>Data Protection &amp; GDPR</h4>
+        <p>All client data, driver records, and operational information are handled in full compliance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
+        <span class="comp-badge">UK GDPR Compliant</span>
+      </div>
+      <div class="comp-card">
+        <span class="comp-icon">🏅</span>
+        <h4>Service Level Agreements (SLAs)</h4>
+        <p>We operate under clearly defined SLAs with all partners, including Yodel and InPost. Our compliance with agreed delivery windows, vehicle standards, and reporting obligations is tracked and maintained rigorously.</p>
+        <span class="comp-badge">SLA Compliant</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="process-bg"></div>
+  <div class="process-inner">
+    <div class="reveal">
+      <div class="tag">How It Works</div>
+      <h2>Four Simple Steps</h2>
+      <p class="intro">Getting started with FC Fleet Limited is quick and straightforward.</p>
+    </div>
+    <div class="steps reveal reveal-d1">
+      <div class="step"><div class="step-circle">01</div><h4>Get in Touch</h4><p>Call or email us with your requirements — vehicle type, dates, route, or logistics brief.</p></div>
+      <div class="step"><div class="step-circle">02</div><h4>Receive a Quote</h4><p>We'll respond quickly with a transparent, competitive quote. No hidden charges.</p></div>
+      <div class="step"><div class="step-circle">03</div><h4>Confirm &amp; Book</h4><p>Agree terms, complete documentation, and your booking is confirmed and secured.</p></div>
+      <div class="step"><div class="step-circle">04</div><h4>Hit the Road</h4><p>Your vehicle or service is ready to go — backed by our full ongoing support.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREERS -->
+<section id="careers">
+  <div class="reveal">
+    <div class="tag">Join Our Team</div>
+    <h2>Careers at FC Fleet</h2>
+    <p class="intro">We are growing and looking for professional, reliable drivers to join our expanding team supporting Yodel, InPost, and our wider operations.</p>
+  </div>
+  <div class="careers-layout reveal reveal-d1">
+    <div class="careers-info">
+      <div class="careers-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&fit=crop" alt="Delivery driver preparing van for route" loading="lazy">
+      </div>
+      <h3>🚐 Drivers Required</h3>
+      <p>FC Fleet Limited is actively recruiting experienced drivers to support our Yodel and InPost contracts alongside our wider delivery and logistics operations. If you hold a full UK driving licence and want stable, rewarding work with a growing fleet company — we want to hear from you.</p>
+      <p>We offer competitive pay, flexible working arrangements, and a professional environment where reliability is recognised and rewarded.</p>
+      <ul class="req-list">
+        <li><span class="req-check">✓</span> Full UK driving licence (Category B) — <strong>Essential</strong></li>
+        <li><span class="req-check">✓</span> Clean or minimal points on licence</li>
+        <li><span class="req-check">✓</span> Experience driving vans / commercial vehicles (preferred)</li>
+        <li><span class="req-check">✓</span> Reliable, punctual, and professional approach</li>
+        <li><span class="req-check">✓</span> Good knowledge of UK roads and navigation apps</li>
+        <li><span class="req-check">✓</span> Right to work in the United Kingdom</li>
+        <li><span class="req-check">✓</span> DBS check required (we assist with this)</li>
+        <li><span class="req-check">✓</span> CPC card advantageous but not required</li>
+      </ul>
+      <a href="mailto:samson@fcfleetlimited.co.uk?subject=Driver Application – FC Fleet" class="btn-red" style="margin-top:.5rem">Apply by Email →</a>
+    </div>
+    <div class="job-card">
+      <div class="job-card-head">
+        <div>
+          <div class="job-title">Delivery Driver</div>
+          <div class="job-meta">
+            <span class="job-meta-tag">📍 UK-Wide</span>
+            <span class="job-meta-tag">💼 Full-Time / Part-Time</span>
+            <span class="job-meta-tag">🚐 Van Provided</span>
+          </div>
+        </div>
+        <span class="job-badge">Now Hiring</span>
+      </div>
+      <div class="job-body">
+        <p>Join FC Fleet Limited and become part of a professional team delivering for major UK logistics partners including Yodel and InPost. You'll be responsible for the safe, timely, and professional delivery of parcels and goods along assigned routes, maintaining our high compliance and service standards.</p>
+        <div class="job-tags">
+          <span class="tag-chip">Full Licence Required</span>
+          <span class="tag-chip">Yodel Routes</span>
+          <span class="tag-chip">InPost Routes</span>
+          <span class="tag-chip">Competitive Pay</span>
+          <span class="tag-chip">Flexible Hours</span>
+          <span class="tag-chip">DBS Required</span>
+        </div>
+        <div style="font-weight:700;font-size:.9rem;color:var(--dark);margin-bottom:1rem">Submit Your Application</div>
+        <form class="apply-form" onsubmit="handleApply(event)">
+          <div class="form-row2">
+            <input type="text" placeholder="Full Name *" required>
+            <input type="tel" placeholder="Phone Number *" required>
+          </div>
+          <input type="email" placeholder="Email Address *" required>
+          <select required>
+            <option value="" disabled selected>Licence Type *</option>
+            <option>Full UK Driving Licence (Category B)</option>
+            <option>Full UK Licence + CPC Card</option>
+            <option>Category C (HGV)</option>
+          </select>
+          <textarea placeholder="Brief summary of your driving experience and availability..."></textarea>
+          <button type="submit" class="btn-red">Submit Application →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="reveal">
+    <div class="tag">Contact Us</div>
+    <h2>Get a Quote</h2>
+    <p class="intro">Ready to move your business forward? Get in touch today and our team will respond promptly with a tailored quote.</p>
+  </div>
+  <div class="contact-grid reveal reveal-d1">
+    <div class="contact-items">
+      <div class="c-item">
+        <div class="c-icon">📞</div>
+        <div><h4>Phone</h4><a href="tel:+447931302971">+44 7931 302 971</a></div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon">✉️</div>
+        <div><h4>Email</h4><a href="mailto:samson@fcfleetlimited.co.uk">samson@fcfleetlimited.co.uk</a></div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon">🌐</div>
+        <div><h4>Website</h4><a href="https://www.fcfleet.co.uk">www.fcfleet.co.uk</a></div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon">🕐</div>
+        <div><h4>Working Hours</h4><p>Mon – Fri: 8:00am – 6:00pm<br>Saturday: 9:00am – 2:00pm<br>Emergency line: 24/7</p></div>
+      </div>
+      <div style="background:var(--red-soft);border:1.5px solid rgba(230,48,18,.2);border-radius:8px;padding:1.4rem">
+        <div style="font-weight:700;font-size:.9rem;color:var(--dark);margin-bottom:.4rem">🤝 Business &amp; Contract Enquiries</div>
+        <p style="font-size:.85rem;color:var(--slate);line-height:1.7">For logistics contracts, fleet partnerships, or large-scale service agreements — contact us directly. We work with businesses of all sizes across the UK.</p>
+      </div>
+    </div>
+    <form class="contact-form" onsubmit="handleContact(event)">
+      <div class="form-2">
+        <input type="text" placeholder="Your Name *" required>
+        <input type="text" placeholder="Company Name">
+      </div>
+      <div class="form-2">
+        <input type="email" placeholder="Email Address *" required>
+        <input type="tel" placeholder="Phone Number">
+      </div>
+      <select>
+        <option value="" disabled selected>Service Required</option>
+        <option>Delivery Van Rental</option>
+        <option>Van Leasing</option>
+        <option>Logistics Services</option>
+        <option>Last Mile Delivery</option>
+        <option>Freight Transport</option>
+        <option>Fleet Management</option>
+        <option>Same-Day Courier</option>
+        <option>Temperature-Controlled Transport</option>
+        <option>Construction &amp; Trade Logistics</option>
+        <option>Other</option>
+      </select>
+      <textarea placeholder="Describe your requirements — vehicle type, quantity, duration, routes, any specific needs..." required></textarea>
+      <button type="submit" class="btn-red" style="font-size:1rem;padding:1rem">Send Enquiry →</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#home" class="logo"><span class="logo-badge">FC</span> Fleet Limited</a>
+      <p>Professional fleet and logistics solutions across the UK. Proud partners of Yodel and InPost. Fully compliant, fully insured.</p>
+      <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap">
+        <span style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#94a3b8;font-size:.7rem;font-weight:600;letter-spacing:1px;padding:.25rem .65rem;border-radius:3px;text-transform:uppercase">Yodel Partner</span>
+        <span style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#94a3b8;font-size:.7rem;font-weight:600;letter-spacing:1px;padding:.25rem .65rem;border-radius:3px;text-transform:uppercase">InPost Partner</span>
+        <span style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#94a3b8;font-size:.7rem;font-weight:600;letter-spacing:1px;padding:.25rem .65rem;border-radius:3px;text-transform:uppercase">KRI Monitored</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#services">Van Rental</a></li>
+        <li><a href="#services">Van Leasing</a></li>
+        <li><a href="#services">Logistics</a></li>
+        <li><a href="#services">Last Mile Delivery</a></li>
+        <li><a href="#services">Freight Transport</a></li>
+        <li><a href="#services">Fleet Management</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#why">Why FC Fleet</a></li>
+        <li><a href="#why">Compliance</a></li>
+        <li><a href="#why">KPIs</a></li>
+        <li><a href="#partners">Our Partners</a></li>
+        <li><a href="#fleet">Our Fleet</a></li>
+        <li><a href="#careers">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+447931302971">+44 7931 302 971</a></li>
+        <li><a href="mailto:samson@fcfleetlimited.co.uk">samson@fcfleetlimited.co.uk</a></li>
+        <li><a href="https://www.fcfleet.co.uk">www.fcfleet.co.uk</a></li>
+        <li><a href="#contact">Get a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 FC Fleet Limited. All rights reserved. Registered in England &amp; Wales.</p>
+    <p style="color:#334155">fcfleet.co.uk</p>
+  </div>
+</footer>
+
+<script>
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open')}
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+function handleApply(e){e.preventDefault();e.target.innerHTML='<div style="background:#f0fdf4;border:2px solid #22c55e;border-radius:8px;padding:1.5rem;text-align:center"><div style="font-size:1.8rem;margin-bottom:.5rem">✅</div><div style="font-weight:700;color:#15803d;font-size:1rem">Application Submitted!</div><div style="color:#64748b;font-size:.9rem;margin-top:.3rem">We\'ll be in touch shortly. Thank you for your interest in FC Fleet Limited.</div></div>'}
+function handleContact(e){e.preventDefault();e.target.innerHTML='<div style="background:#f0fdf4;border:2px solid #22c55e;border-radius:8px;padding:2rem;text-align:center"><div style="font-size:2rem;margin-bottom:.5rem">✅</div><div style="font-weight:700;color:#15803d;font-size:1.1rem">Enquiry Received!</div><div style="color:#64748b;font-size:.9rem;margin-top:.4rem">Thank you for contacting FC Fleet Limited. A member of our team will respond to you promptly.</div></div>'}
+</script>
+</body>
+</html>
